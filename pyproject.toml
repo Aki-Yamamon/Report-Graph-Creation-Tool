@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phasorplot"
+version = "0.1.0"
+description = "レポート用のフェーザ図 / 極座標図を、メソッドを呼ぶだけで作れる matplotlib ラッパー"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+keywords = ["phasor", "phasor diagram", "polar", "matplotlib", "electrical engineering"]
+dependencies = [
+    "matplotlib>=3.5",
+    "numpy>=1.20",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
